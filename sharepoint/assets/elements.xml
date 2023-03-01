@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Field ID="{ec0bd434-c6a6-444e-99e9-8c33da35e815}"
+            Name="SPFxGUID"
+            DisplayName="GUID"
+            Type="Text"
+            Required="FALSE"
+            Group="MSF SPFx"
+            ClientSideComponentId="d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28">
+    </Field>
+</Elements>

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
+      "fieldCustomizers": {
+        "GUID": {
+          "id": "d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28",
+          "properties": {
+
+          }
+        }
+      }
+    },
+    "guidMsf": {
+      "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
+      "fieldCustomizers": {
+        "GUID": {
+          "id": "d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28",
+          "properties": {
+
+          }
+        }
+      }
+    }
+  }
+}
