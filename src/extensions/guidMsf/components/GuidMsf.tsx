@@ -7,7 +7,6 @@ export interface IGuidMsfProps {
   guid:string;
 }
 
-const LOG_SOURCE: string = 'GuidMsf';
 
 export default class GuidMsf extends React.Component<IGuidMsfProps, {}> {
   public componentDidMount(): void {
@@ -20,8 +19,7 @@ export default class GuidMsf extends React.Component<IGuidMsfProps, {}> {
 
   public render(): React.ReactElement<{}> {
     return (
-      <div className={styles.guidMsf}>
-        { this.props.text }<br/>
+      <div className={styles.guidMsf} onClick={() => {navigator.clipboard.writeText(`${this.props.guid}`)}}>
         { this.props.guid }
       </div>
     );

@@ -1,24 +1,26 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+
+import { Log } from '@microsoft/sp-core-library';
 import {
   BaseFieldCustomizer,
   IFieldCustomizerCellEventParameters
 } from '@microsoft/sp-listview-extensibility';
 import  { sp }  from '@pnp/sp/presets/all'
-import * as strings from 'GuidMsfFieldCustomizerStrings';
-import GuidMsf, { IGuidMsfProps } from './components/GuidMsf';
+import * as strings from 'LibraryMsfFieldCustomizerStrings';
+import LibraryMsf, { ILibraryMsfProps } from './components/LibraryMsf';
 
 
-export interface IGuidMsfFieldCustomizerProperties {
+export interface ILibraryMsfFieldCustomizerProperties {
 
 }
 
 
-export default class GuidMsfFieldCustomizer
-  extends BaseFieldCustomizer<IGuidMsfFieldCustomizerProperties> {
+export default class LibraryMsfFieldCustomizer
+  extends BaseFieldCustomizer<ILibraryMsfFieldCustomizerProperties> {
 
   public async onInit(): Promise<void> {
-   
+    
     console.log("***INITIALIZED***")
     const columnName:string = this.context._field.internalName;
     const guid: string = `${this.context._pageContext._list.id._guid}`
@@ -29,7 +31,7 @@ export default class GuidMsfFieldCustomizer
     const updateItems = async function () {
       try { await items.forEach((item)=> { 
         list.items.getById(item.ID).update({
-        SPFxGUID: `${guid}`
+          SPFxLibrary: `${listTitle}`
     
       })
         console.log(`ID: ${item.ID}***FINISHED***`)
@@ -40,21 +42,23 @@ export default class GuidMsfFieldCustomizer
 
     updateItems()
 
+
     return Promise.resolve();
   }
 
-
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
+  
     console.log('***RENDERING***')
-    const guid: string = `${this.context._pageContext._list.id._guid}`
-    const guidMsf: React.ReactElement<{}> =
-      React.createElement(GuidMsf, { guid } as IGuidMsfProps);
+    const text: string =  `${this.context._pageContext._list.title}` 
 
-    ReactDOM.render(guidMsf, event.domElement);
+    const libraryMsf: React.ReactElement<{}> =
+      React.createElement(LibraryMsf, { text } as ILibraryMsfProps);
+
+    ReactDOM.render(libraryMsf, event.domElement);
   }
 
-
   public onDisposeCell(event: IFieldCustomizerCellEventParameters): void {
+    
     ReactDOM.unmountComponentAtNode(event.domElement);
     super.onDisposeCell(event);
   }

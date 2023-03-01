@@ -7,10 +7,10 @@
       "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
       "fieldCustomizers": {
         "GUID": {
-          "id": "d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28",
-          "properties": {
-
-          }
+           "id": "d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28"
+        },
+        "Library": {
+          "id": "e68903e9-0c5e-45a5-9c86-81954e56db5d"
         }
       }
     },
@@ -18,10 +18,15 @@
       "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
       "fieldCustomizers": {
         "GUID": {
-          "id": "d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28",
-          "properties": {
-
-          }
+          "id": "d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28"
+        }
+      }
+    },
+    "libraryMsf": {
+      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "fieldCustomizers": {
+        "Library": {
+          "id": "e68903e9-0c5e-45a5-9c86-81954e56db5d"
         }
       }
     }

@@ -9,10 +9,19 @@
           "manifest": "./src/extensions/guidMsf/GuidMsfFieldCustomizer.manifest.json"
         }
       ]
+    },
+    "library-msf-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/libraryMsf/LibraryMsfFieldCustomizer.js",
+          "manifest": "./src/extensions/libraryMsf/LibraryMsfFieldCustomizer.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "GuidMsfFieldCustomizerStrings": "lib/extensions/guidMsf/loc/{locale}.js"
+    "GuidMsfFieldCustomizerStrings": "lib/extensions/guidMsf/loc/{locale}.js",
+    "LibraryMsfFieldCustomizerStrings": "lib/extensions/libraryMsf/loc/{locale}.js"
   }
 }
