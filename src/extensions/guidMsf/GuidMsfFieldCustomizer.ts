@@ -5,7 +5,6 @@ import {
   IFieldCustomizerCellEventParameters
 } from '@microsoft/sp-listview-extensibility';
 import  { sp }  from '@pnp/sp/presets/all'
-import * as strings from 'GuidMsfFieldCustomizerStrings';
 import GuidMsf, { IGuidMsfProps } from './components/GuidMsf';
 
 
@@ -18,9 +17,7 @@ export default class GuidMsfFieldCustomizer
   extends BaseFieldCustomizer<IGuidMsfFieldCustomizerProperties> {
 
   public async onInit(): Promise<void> {
-   
-    console.log("***INITIALIZED***")
-    const columnName:string = this.context._field.internalName;
+    
     const guid: string = `${this.context._pageContext._list.id._guid}`
     const listTitle: string =  `${this.context._pageContext._list.title}`
     const items: any[] = await sp.web.lists.getByTitle(listTitle).items();
@@ -32,7 +29,7 @@ export default class GuidMsfFieldCustomizer
         SPFxGUID: `${guid}`
     
       })
-        console.log(`ID: ${item.ID}***FINISHED***`)
+    
       })} catch (err) {
         console.log(err)
       }
@@ -45,7 +42,7 @@ export default class GuidMsfFieldCustomizer
 
 
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
-    console.log('***RENDERING***')
+ 
     const guid: string = `${this.context._pageContext._list.id._guid}`
     const guidMsf: React.ReactElement<{}> =
       React.createElement(GuidMsf, { guid } as IGuidMsfProps);

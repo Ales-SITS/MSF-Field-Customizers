@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-    <Field  Name="SPFxGUID"
+    <Field  ID="672e9cf1-59f8-4b35-bb2c-c826da8f8a95"
+            Name="SPFxGUID"
             DisplayName="Library GUID"
             Type="Text"
             Required="FALSE"
             Group="MSF SPFx"
             ClientSideComponentId="d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28">
     </Field>
-    <Field  Name="SPFxLibrary"
+    <Field  ID="b3bcb1f5-ab62-4cfa-90e4-1aae706e65bd"
+            Name="SPFxLibrary"
             DisplayName="Library Title"
             Type="Text"
             Required="FALSE"

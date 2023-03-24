@@ -17,11 +17,20 @@
           "manifest": "./src/extensions/libraryMsf/LibraryMsfFieldCustomizer.manifest.json"
         }
       ]
+    },
+    "progressbar-msf-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/progressbarMsf/ProgressbarMsfFieldCustomizer.js",
+          "manifest": "./src/extensions/progressbarMsf/ProgressbarMsfFieldCustomizer.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "GuidMsfFieldCustomizerStrings": "lib/extensions/guidMsf/loc/{locale}.js",
-    "LibraryMsfFieldCustomizerStrings": "lib/extensions/libraryMsf/loc/{locale}.js"
+    "LibraryMsfFieldCustomizerStrings": "lib/extensions/libraryMsf/loc/{locale}.js",
+    "ProgressbarMsfFieldCustomizerStrings": "lib/extensions/progressbarMsf/loc/{locale}.js"
   }
 }
