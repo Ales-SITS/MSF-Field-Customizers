@@ -25,12 +25,30 @@
           "manifest": "./src/extensions/progressbarMsf/ProgressbarMsfFieldCustomizer.manifest.json"
         }
       ]
+    },
+    "steps-msf-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/stepsMsf/StepsMsfFieldCustomizer.js",
+          "manifest": "./src/extensions/stepsMsf/StepsMsfFieldCustomizer.manifest.json"
+        }
+      ]
+    },
+    "arrowsteps-msf-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/arrowstepsMsf/ArrowstepsMsfFieldCustomizer.js",
+          "manifest": "./src/extensions/arrowstepsMsf/ArrowstepsMsfFieldCustomizer.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "GuidMsfFieldCustomizerStrings": "lib/extensions/guidMsf/loc/{locale}.js",
     "LibraryMsfFieldCustomizerStrings": "lib/extensions/libraryMsf/loc/{locale}.js",
-    "ProgressbarMsfFieldCustomizerStrings": "lib/extensions/progressbarMsf/loc/{locale}.js"
+    "ProgressbarMsfFieldCustomizerStrings": "lib/extensions/progressbarMsf/loc/{locale}.js",
+    "StepsMsfFieldCustomizerStrings": "lib/extensions/stepsMsf/loc/{locale}.js",
+    "ArrowstepsMsfFieldCustomizerStrings": "lib/extensions/arrowstepsMsf/loc/{locale}.js"
   }
 }

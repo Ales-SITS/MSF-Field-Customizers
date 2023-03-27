@@ -1,0 +1,46 @@
+.stepsMsf {
+  background-color: rgb(226, 226, 226);
+  border-radius: 5px;
+  padding: 2px 5px;
+  width: fit-content;
+  color: "[theme:white, default:#ffffff]";
+  padding: 0.5rem;
+
+
+  .steps {
+    display: flex;
+
+    .steps_wrapper{
+      display: flex;
+      flex-direction: column;
+
+
+      .step_box{
+        display: flex;
+        align-items: center;
+
+
+          .step_label {
+            font-size: 8px;
+          }
+
+          .step_radio {
+            margin: 0;
+            outline: 0px !important;
+            border: 0px !important;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          };
+
+          .step_connector {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(121, 121, 121);
+          }
+      }
+    }
+  }
+
+}
+

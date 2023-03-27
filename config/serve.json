@@ -14,6 +14,12 @@
         },
         "Percent": {
           "id": "609e8c05-6978-4b3f-9b21-ac3f5604140b"
+        },
+        "Steps": {
+          "id": "cfcf9dab-8fa8-45af-a591-3b1150ef6fc9"
+        },
+        "ASteps": {
+          "id": "1776dbcc-aa20-4aa5-8654-9f4f94981779"
         }
       }
     },
@@ -38,6 +44,31 @@
       "fieldCustomizers": {
         "Percent": {
           "id": "609e8c05-6978-4b3f-9b21-ac3f5604140b"
+        }
+      }
+    },
+    "stepsMsf": {
+      "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
+      "fieldCustomizers": {
+        "Steps0": {
+          "id": "cfcf9dab-8fa8-45af-a591-3b1150ef6fc9"
+        }
+      }
+    },
+    "stepsMsf": {
+      "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
+      "fieldCustomizers": {
+        "Steps": {
+          "id": "cfcf9dab-8fa8-45af-a591-3b1150ef6fc9"
+        }
+      }
+    },
+    "arrowstepsMsf": {
+      "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
+      "fieldCustomizers": {
+        "ASteps": {
+          "id": "1776dbcc-aa20-4aa5-8654-9f4f94981779"
+       
         }
       }
     }
