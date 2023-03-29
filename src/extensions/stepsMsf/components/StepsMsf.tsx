@@ -14,7 +14,8 @@ export interface IStepsMsfProps {
   choices: any[];
   cxt: any;
   val: any;
-  choicesOptions: any
+  choicesOptions: any;
+  opt: string
 }
 
 
@@ -27,7 +28,7 @@ const StepsMsf = (props:IStepsMsfProps) => {
   const jsonObject3 = jsonObject2.operands[2]
   const jsonObject4 = jsonObject3.operands[2]
   const jsonObject5 = jsonObject4.operands[2]
-  console.log(jsonObject)
+  //console.log(jsonObject)
 
   let classobj:any = {}
 
@@ -36,7 +37,7 @@ const StepsMsf = (props:IStepsMsfProps) => {
   classobj[jsonObject3.operands[0].operands[1]] = jsonObject3.operands[1]
   classobj[jsonObject4.operands[0].operands[1]] = jsonObject4.operands[1]
   classobj[jsonObject5.operands[0].operands[1]] = jsonObject5.operands[1]
-  console.log(classobj)
+  //console.log(classobj)
 
   const itemID:number = props.val._values.get("ID")
   const sp = spfi().using(SPFx(props.cxt));
@@ -57,22 +58,23 @@ const StepsMsf = (props:IStepsMsfProps) => {
 
     const options = props.choices
 
-    const [selection,setSelection] = useState (props.val._values.get("Steps"))
+    const [selection,setSelection] = useState (props.opt)
     
     const selectionHandler = (e:any) => {
       setSelection(e.target.value) 
       updateItem(e.target.value)
     }
-
+    //console.log(props.opt)
     return (
       <div className={styles.stepsMsf}>
         <div className={styles.steps}>
         {options.map((option, i, arr) => 
-          <div className={styles.steps_wrapper}>
-            <div className={`${classobj[option]} ${styles.step_box}`}>
+          <label className={`${classobj[option]} ${styles.steps_wrapper}`}>
+            <div className={styles.step_box}>
                 <span className={styles.step_label}>{option}</span>
             </div>
             <form className={styles.step_box}>
+              {i === 0 ? <div className={styles.step_connector_invisible}/> : <div className={styles.step_connector}/>}
               <input 
               type="radio" 
               name="selection" 
@@ -82,10 +84,10 @@ const StepsMsf = (props:IStepsMsfProps) => {
               checked={selection === option}
               className={styles.step_radio}
               />
-              {arr.length - 1 === i ? "" : <div className={styles.step_connector}/>}
+              {arr.length - 1 === i ? <div className={styles.step_connector_invisible}/> : <div className={styles.step_connector}/>}
 
             </form>
-          </div>
+          </label>
         )}
         </div>
       </div>

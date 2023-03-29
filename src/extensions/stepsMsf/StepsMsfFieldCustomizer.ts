@@ -49,9 +49,10 @@ export default class StepsMsfFieldCustomizer
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
     
     const val: any = event.listItem;
+    const opt: string = event.fieldValue;
 
     const stepsMsf: React.ReactElement<{}> =
-      React.createElement(StepsMsf, { choices, cxt, val,  choicesOptions } as IStepsMsfProps);
+      React.createElement(StepsMsf, { choices, cxt, val,  choicesOptions, opt } as IStepsMsfProps);
 
     ReactDOM.render(stepsMsf, event.domElement);
   }

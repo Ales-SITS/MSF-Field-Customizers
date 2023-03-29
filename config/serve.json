@@ -15,6 +15,9 @@
         "Percent": {
           "id": "609e8c05-6978-4b3f-9b21-ac3f5604140b"
         },
+        "Calculated": {
+          "id": "609e8c05-6978-4b3f-9b21-ac3f5604140b"
+        },
         "Steps": {
           "id": "cfcf9dab-8fa8-45af-a591-3b1150ef6fc9"
         },
@@ -43,6 +46,14 @@
       "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
       "fieldCustomizers": {
         "Percent": {
+          "id": "609e8c05-6978-4b3f-9b21-ac3f5604140b"
+        }
+      }
+    },
+    "progressbarMsf": {
+      "pageUrl": "https://msfintltestgeneva.sharepoint.com/sites/GRP-SITS-ShareWithGuest/Shared%20Documents/Forms/AllItems.aspx",
+      "fieldCustomizers": {
+        "Calculated": {
           "id": "609e8c05-6978-4b3f-9b21-ac3f5604140b"
         }
       }

@@ -1,71 +1,69 @@
 .stepsMsf {
   position: relative;
+  display:flex;
+  align-items: center;
   padding: 2px 0px;
   width: fit-content;
-  color: "[theme:white, default:#ffffff]";
-  padding: 0.5rem;
   display: flex;
 
-  
-  .arrow_tip_front {
-    position:absolute;
-    left: 5px;
-    width: 0; 
-    height: 0; 
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid rgb(255, 255, 255);
-    z-index: 4;
-  }
 
-  .step_arrow {
-    position: relative;;
-    height: 30px;
-    max-width: 80px;
-    min-width: 80px;
-    cursor: pointer;
+
+  .step_box {
     display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
 
-    .arrow_text{
+    .greyed {
+      filter: grayscale(100%);
+    };
+
+    .saturated {
+      filter: saturate(1.2)
+    }
+
+    .step_arrow {
       position: relative;
-      text-align: center;
-      line-height: 30px;
-      width: fit-content;
-      z-index: 3;
-      span {
-        position: relative;
-        font-size: 12px;
-        left: 16px
-      }
+      height: 20px;
+      max-width: 60px;
+      min-width: 60px;
+      display: flex;
     };
 
     .arrow_tip {
-      position:relative;
-      left:15px;
-      width: 0; 
-      height: 0; 
-      border-top: 15px solid red;
-      border-bottom: 15px solid red;
-      border-left: 15px solid transparent;
+      width: 14.14px;
+      height: 14.14px;
+      transform-origin: center;
+      transform: rotate(45deg);
+      position: absolute;
+      border-radius: 0 3px 0 0;
+      left: 52px;
+      z-index: 1;
+      border-top: 1px solid white;
+      border-right: 1px solid white;
+    };
+
+    .arrow_text{
+      background-color: transparent;
+      position: absolute;
+      left: 12px;
+      font-size: 10px;
+      text-align: center;
+      line-height: 20px;
+      width: fit-content;
       z-index: 2;
     };
 
-    .arrow_tip_below {
-      position:absolute;
-      right: -17px;
-      width: 0; 
-      height: 0; 
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      border-left: 15px solid rgb(255, 255, 255);
-      z-index: 1;
-    }
-
-  }
-
-  .step_arrow:hover {
+  .step_box:hover {
     filter: brightness(110%);
   }
+
+  }
   
+  
+
+ 
+
 }
 
+/*filter: saturate(30%);*/

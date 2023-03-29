@@ -12,8 +12,9 @@
     "@microsoft/decorators": "1.15.2",
     "@microsoft/sp-core-library": "1.15.2",
     "@microsoft/sp-listview-extensibility": "1.15.2",
+    "@microsoft/sp-office-ui-fabric-core": "^1.16.1",
     "@pnp/sp": "^3.13.0",
-    "office-ui-fabric-react": "7.185.7",
+    "office-ui-fabric-react": "^7.185.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "tslib": "2.3.1"

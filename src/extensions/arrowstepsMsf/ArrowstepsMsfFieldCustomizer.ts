@@ -46,9 +46,10 @@ export default class ArrowstepsMsfFieldCustomizer
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 
     const val: any = event.listItem;
+    const opt: string = event.fieldValue;
 
     const arrowstepsMsf: React.ReactElement<{}> =
-      React.createElement(ArrowstepsMsf, { choices, cxt, val,  choicesOptions } as IArrowstepsMsfProps);
+      React.createElement(ArrowstepsMsf, { choices, cxt, val,  choicesOptions, opt } as IArrowstepsMsfProps);
 
     ReactDOM.render(arrowstepsMsf, event.domElement);
   }

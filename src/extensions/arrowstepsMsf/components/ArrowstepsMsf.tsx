@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {useState} from 'react';
 import styles from './ArrowstepsMsf.module.scss';
-import ArrowComponent from './ArrowComponent';
 import { spfi, SPFx } from "@pnp/sp";
 import "@pnp/sp/webs";
 import "@pnp/sp/lists";
@@ -15,7 +14,12 @@ export interface IArrowstepsMsfProps {
   choices: any[];
   cxt: any;
   val: any;
-  choicesOptions: any
+  choicesOptions: any;
+  opt:string
+}
+
+interface GreyedProps extends React.CSSProperties {
+  filter: string;
 }
 
 const ArrowstepsMsf = (props:IArrowstepsMsfProps) => {
@@ -27,7 +31,8 @@ const ArrowstepsMsf = (props:IArrowstepsMsfProps) => {
     const jsonObject3 = jsonObject2.operands[2]
     const jsonObject4 = jsonObject3.operands[2]
     const jsonObject5 = jsonObject4.operands[2]
-    console.log(jsonObject)
+    const jsonObject6 = jsonObject5.operands[2]
+    //console.log(jsonObject)
   
     let classobj:any = {}
   
@@ -36,7 +41,8 @@ const ArrowstepsMsf = (props:IArrowstepsMsfProps) => {
     classobj[jsonObject3.operands[0].operands[1]] = jsonObject3.operands[1]
     classobj[jsonObject4.operands[0].operands[1]] = jsonObject4.operands[1]
     classobj[jsonObject5.operands[0].operands[1]] = jsonObject5.operands[1]
-    console.log(classobj)
+    classobj[jsonObject6.operands[0].operands[1]] = jsonObject6.operands[1]
+    //console.log(classobj)
   
     const itemID:number = props.val._values.get("ID")
     const sp = spfi().using(SPFx(props.cxt));
@@ -46,10 +52,11 @@ const ArrowstepsMsf = (props:IArrowstepsMsfProps) => {
       try { 
         await sp.web.lists.getByTitle(listTitle).items.getById(itemID).update({Steps: update})
         await sp.web.lists.getByTitle(listTitle).items.getById(itemID).update({Steps0: update})
-        //location.reload()
+        await sp.web.lists.getByTitle(listTitle).items.getById(itemID).update({Asteps: update})
+        location.reload()
       }
       catch (err) {
-        console.log(err)
+        //console.log(err)
       }
     }
   
@@ -57,27 +64,29 @@ const ArrowstepsMsf = (props:IArrowstepsMsfProps) => {
   
     const options = props.choices
   
-    const [selection,setSelection] = useState (props.val._values.get("Steps"))
+    const [selection,setSelection] = useState (props.opt)
     
-    const selectionHandler = (e:any) => {
-        setSelection(e.target.value) 
-        updateItem(e.target.value)
-      }
+    const selectionHandler = (option:any) => {
+        //console.log(option)
+        setSelection(option) 
+        updateItem(option)
+       }
   
+    //console.log(options.indexOf(props.opt))
+
 
 
     return (
       <div className={styles.stepsMsf}>
       {options.map((option:string, i:number, arr:string[]) => 
-        <div className={`${classobj[option]} ${styles.step_arrow}`} onClick={selectionHandler}>
-          <div className={styles.arrow_text}>
-            <span>{option}</span>
-          </div>
-          <div className={`${classobj[option]} ${styles.arrow_tip}`}/>
+        <div className={styles.step_box} onClick={()=>selectionHandler(option)}>
+          <div className={`${options.indexOf(option) > options.indexOf(props.opt) ? styles.greyed : styles.saturated} ${classobj[option]} ${styles.step_arrow}`}/>
+          <div className={`${options.indexOf(option) > options.indexOf(props.opt) ? styles.greyed : styles.saturated} ${classobj[option]} ${styles.arrow_text}`}
+           >{option}</div>
+          <div className={`${options.indexOf(option) > options.indexOf(props.opt) ? styles.greyed : styles.saturated} ${classobj[option]} ${styles.arrow_tip}`}/>
         </div>
       )}
-
-    </div>
+     </div>
     );
   
 }

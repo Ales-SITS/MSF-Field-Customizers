@@ -1,11 +1,9 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
 .stepsMsf {
-  background-color: rgb(226, 226, 226);
   border-radius: 5px;
-  padding: 2px 5px;
   width: fit-content;
   color: "[theme:white, default:#ffffff]";
-  padding: 0.5rem;
-
 
   .steps {
     display: flex;
@@ -13,11 +11,15 @@
     .steps_wrapper{
       display: flex;
       flex-direction: column;
+      padding: 2px 0px;
+
 
 
       .step_box{
         display: flex;
         align-items: center;
+        justify-content: center;
+        cursor: pointer;
 
 
           .step_label {
@@ -34,13 +36,26 @@
           };
 
           .step_connector {
-            width: 25px;
+            width: 10px;
             height: 3px;
-            background-color: rgb(121, 121, 121);
+            background-color: rgb(255, 255, 255);
+          };
+
+          .step_connector_invisible {
+            width: 10px;
+            height: 3px;
+            background-color: rgba(121, 121, 121,0);
           }
+          
+          }
+
       }
     }
-  }
+
+    .steps_wrapper:hover {
+      filter: brightness(105%);
+    }
+  
 
 }
 
