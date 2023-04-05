@@ -1,16 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
 import {
   BaseFieldCustomizer,
   IFieldCustomizerCellEventParameters
 } from '@microsoft/sp-listview-extensibility';
-
-
 import ProgressbarMsf, { IProgressbarMsfProps } from './components/ProgressbarMsf';
 
 export interface IProgressbarMsfFieldCustomizerProperties {
-  sampleText?: string;
+  
 }
 
 export default class ProgressbarMsfFieldCustomizer

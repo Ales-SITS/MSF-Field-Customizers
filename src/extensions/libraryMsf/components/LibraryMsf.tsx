@@ -18,7 +18,7 @@ export default class LibraryMsf extends React.Component<ILibraryMsfProps, {}> {
   public render(): React.ReactElement<{}> {
     return (
       <div className={styles.libraryMsf} onClick={()=>{navigator.clipboard.writeText(`${this.props.text}`)}}>
-        { this.props.text }
+        { this.props.text }       
       </div>
     );
   }

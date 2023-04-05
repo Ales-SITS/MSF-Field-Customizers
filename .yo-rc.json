@@ -11,6 +11,11 @@
     "solutionShortDescription": "msf-field-customizers description",
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
+    "nodeVersion": "14.21.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.4.1"
+    },
     "componentType": "extension",
     "extensionType": "FieldCustomizer"
   }

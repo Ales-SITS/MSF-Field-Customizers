@@ -28,8 +28,8 @@ export default class ArrowstepsMsfFieldCustomizer
 
   public async onInit(): Promise<void> {
     const sp = spfi().using(SPFx(this.context));
-      const listTitle: string =  `${this.context._pageContext._list.title}`
-      const optionsfield: IFieldInfo = await sp.web.lists.getByTitle(listTitle).fields.getByTitle("StepsOptions")();
+      const listTitle: string =  `${this.context.pageContext.list.title}`
+      const optionsfield: IFieldInfo = await sp.web.lists.getByTitle(listTitle).fields.getByTitle("Status")();
       
       const readChoices = function () {
     }
@@ -47,7 +47,7 @@ export default class ArrowstepsMsfFieldCustomizer
 
     const val: any = event.listItem;
     const opt: string = event.fieldValue;
-
+    console.log(event)
     const arrowstepsMsf: React.ReactElement<{}> =
       React.createElement(ArrowstepsMsf, { choices, cxt, val,  choicesOptions, opt } as IArrowstepsMsfProps);
 

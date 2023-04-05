@@ -27,13 +27,11 @@ export default class StepsMsfFieldCustomizer
     private options: string[];
 
     public async onInit(): Promise<void> {
-
       const sp = spfi().using(SPFx(this.context));
-      const listTitle: string =  `${this.context._pageContext._list.title}`
-      const optionsfield: IFieldInfo = await sp.web.lists.getByTitle(listTitle).fields.getByTitle("StepsOptions")();
+      const listTitle: string =  `${this.context.pageContext.list.title}`
+      const optionsfield: IFieldInfo = await sp.web.lists.getByTitle(listTitle).fields.getByTitle("Status")();
       
       const readChoices = function () {
-  
       }
   
       readChoices()
@@ -50,7 +48,8 @@ export default class StepsMsfFieldCustomizer
     
     const val: any = event.listItem;
     const opt: string = event.fieldValue;
-
+    //console.log(opt)
+    
     const stepsMsf: React.ReactElement<{}> =
       React.createElement(StepsMsf, { choices, cxt, val,  choicesOptions, opt } as IStepsMsfProps);
 

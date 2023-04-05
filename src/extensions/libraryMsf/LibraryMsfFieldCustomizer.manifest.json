@@ -1,6 +1,5 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
-
   "id": "e68903e9-0c5e-45a5-9c86-81954e56db5d",
   "alias": "LibraryMsfFieldCustomizer",
   "componentType": "Extension",

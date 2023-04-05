@@ -6,8 +6,6 @@
   width: fit-content;
   display: flex;
 
-
-
   .step_box {
     display: flex;
     align-items: center;
@@ -47,12 +45,22 @@
       background-color: transparent;
       position: absolute;
       left: 12px;
-      font-size: 10px;
       text-align: center;
-      line-height: 20px;
-      width: fit-content;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
       z-index: 2;
     };
+
+      .text {
+        text-align: left;
+        width: 50px;
+        font-size: 10px;
+        line-height: 10px;
+        padding: 0;
+        margin: 0;
+        white-space: normal;
+        overflow-wrap: break-word !important;
+      }
 
   .step_box:hover {
     filter: brightness(110%);

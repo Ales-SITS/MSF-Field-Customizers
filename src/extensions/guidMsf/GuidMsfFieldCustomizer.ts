@@ -26,11 +26,12 @@ export default class GuidMsfFieldCustomizer
     
 
     const sp = spfi().using(SPFx(this.context));
-    const guid: string = `${this.context._pageContext._list.id._guid}`
-    const listTitle: string =  `${this.context._pageContext._list.title}`
+    const guid: string = `${this.context.pageContext.list.id}`
+    const listTitle: string =  `${this.context.pageContext.list.title}`
     const items = await sp.web.lists.getByTitle(listTitle).items();
     const list = sp.web.lists.getByTitle(listTitle)
     
+
     const updateItems = async function () {
       try { await items.forEach((item)=> { 
         list.items.getById(item.ID).update({
@@ -51,7 +52,7 @@ export default class GuidMsfFieldCustomizer
 
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
  
-    const guid: string = `${this.context._pageContext._list.id._guid}`
+    const guid: string = `${this.context.pageContext.list.id}`
     const guidMsf: React.ReactElement<{}> =
       React.createElement(GuidMsf, { guid } as IGuidMsfProps);
 

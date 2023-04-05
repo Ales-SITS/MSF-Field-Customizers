@@ -25,7 +25,7 @@ export default class LibraryMsfFieldCustomizer
   public async onInit(): Promise<void> {
 
     const sp = spfi().using(SPFx(this.context));
-    const listTitle: string =  `${this.context._pageContext._list.title}`
+    const listTitle: string =  `${this.context.pageContext.list.title}`
     const items = await sp.web.lists.getByTitle(listTitle).items();
     const list = sp.web.lists.getByTitle(listTitle)
     
@@ -48,7 +48,7 @@ export default class LibraryMsfFieldCustomizer
 
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
   
-    const text: string =  `${this.context._pageContext._list.title}` 
+    const text: string =  `${this.context.pageContext.list.title}` 
 
     const libraryMsf: React.ReactElement<{}> =
       React.createElement(LibraryMsf, { text } as ILibraryMsfProps);

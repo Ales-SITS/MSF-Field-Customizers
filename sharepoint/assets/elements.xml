@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
         <Field  ID="672e9cf1-59f8-4b35-bb2c-c826da8f8a95"
-                Name="SPFxGUID"
+                Name="SPFx_GUID"
                 DisplayName="Library GUID"
                 Type="Text"
                 Required="FALSE"
@@ -9,7 +9,7 @@
                 ClientSideComponentId="d239f6f0-5bbe-4fb2-b93c-2ecba4bfea28">
         </Field>
         <Field  ID="b3bcb1f5-ab62-4cfa-90e4-1aae706e65bd"
-                Name="SPFxLibrary"
+                Name="SPFx_Library"
                 DisplayName="Library Title"
                 Type="Text"
                 Required="FALSE"
@@ -17,12 +17,30 @@
                 ClientSideComponentId="e68903e9-0c5e-45a5-9c86-81954e56db5d">
         </Field>
         <Field  ID="e26b0995-6824-439e-84a0-81d2d50945da"
-                Name="SPFxProgressbar"
+                Name="SPFx_Progress_bar"
                 DisplayName="Progress"
                 Type="Number"
                 Min="0"
                 Required="FALSE"
                 Group="MSF SPFx"
                 ClientSideComponentId="609e8c05-6978-4b3f-9b21-ac3f5604140b">
+        </Field>
+        <Field  ID="f16fb6ad-a029-468d-8781-9b8571ce349a"
+                Name="SPFx_Status_Arrows"
+                DisplayName="Status progress"
+                Type="Text"
+                Min="0"
+                Required="FALSE"
+                Group="MSF SPFx"
+                ClientSideComponentId="1776dbcc-aa20-4aa5-8654-9f4f94981779">
+        </Field>
+        <Field  ID="6aca4c66-50c6-42a8-9e13-b472b93514b5"
+                Name="SPFx_Status"
+                DisplayName="Status check"
+                Type="Text"
+                Min="0"
+                Required="FALSE"
+                Group="MSF SPFx"
+                ClientSideComponentId="cfcf9dab-8fa8-45af-a591-3b1150ef6fc9">
         </Field>
 </Elements>
