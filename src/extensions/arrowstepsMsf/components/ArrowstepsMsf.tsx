@@ -69,9 +69,7 @@ const ArrowstepsMsf = (props:IArrowstepsMsfProps) => {
     
   
     const options = props.choices
-  
-    console.log(classobj)
-    console.log(props.opt)
+
     const [selection,setSelection] = useState (props.opt)
     
     const selectionHandler = (option:any) => {

@@ -39,7 +39,6 @@ export default class GuidMsfFieldCustomizer
       })
     
       })} catch (err) {
-        console.log(list.items)
         console.log(err)
       }
     }

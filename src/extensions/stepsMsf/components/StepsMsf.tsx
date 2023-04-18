@@ -69,12 +69,10 @@ const StepsMsf = (props:IStepsMsfProps) => {
 
     const [selection,setSelection] = useState (props.opt)
     const [hover,setHover] =useState([false,''])
-    console.log(props.opt)
-    const selectionHandler = (e:any) => {
+     const selectionHandler = (e:any) => {
       setSelection(e.target.value) 
       updateItem(e.target.value)
     }
-    //console.log(props.opt)
     return (
       <div className={styles.stepsMsf}>
         <div className={styles.steps}>

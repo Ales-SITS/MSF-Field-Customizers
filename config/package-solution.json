@@ -3,7 +3,7 @@
   "solution": {
     "name": "MSF Field Customizers",
     "id": "048d95a6-51d0-406f-8897-a7086fd72ed5",
-    "version": "5.0.0.7",
+    "version": "5.0.0.8",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -27,7 +27,7 @@
         "title": "Application Extension - Deployment of custom action",
         "description": "Deploys a custom action with ClientSideComponentId association",
         "id": "aa0c91fb-ca09-48f7-a3a9-e47fdd5dd453",
-        "version": "5.0.0.7",
+        "version": "5.0.0.8",
         "assets": {
           "elementManifests": [
             "elements.xml"

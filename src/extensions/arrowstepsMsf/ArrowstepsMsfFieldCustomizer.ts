@@ -47,7 +47,6 @@ export default class ArrowstepsMsfFieldCustomizer
 
     const val: any = event.listItem;
     const opt: string = event.fieldValue;
-    console.log(event)
     const arrowstepsMsf: React.ReactElement<{}> =
       React.createElement(ArrowstepsMsf, { choices, cxt, val,  choicesOptions, opt } as IArrowstepsMsfProps);
 

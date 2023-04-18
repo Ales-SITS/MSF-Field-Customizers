@@ -48,7 +48,6 @@ export default class StepsMsfFieldCustomizer
     
     const val: any = event.listItem;
     const opt: string = event.fieldValue;
-    //console.log(opt)
     
     const stepsMsf: React.ReactElement<{}> =
       React.createElement(StepsMsf, { choices, cxt, val,  choicesOptions, opt } as IStepsMsfProps);
